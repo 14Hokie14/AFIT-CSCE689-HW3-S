@@ -3,6 +3,8 @@
 
 #include "PCalc.h"
 #include "Thread_Pool.h"
+#include <thread>
+#include <vector>
 
 // Your implementation of PCalc_T class should go here. 
 // Make sure your constructor takes in two parameters:
@@ -25,8 +27,8 @@ class PCalc_T: public PCalc {
         // Number of threads
         unsigned int n_threads;
 
-        // Thread pool object
-        Thread_Pool t_pool;
+        //A vector to hold n_thread threads
+        std::vector<std::thread> thread_vector;
 
         
 
